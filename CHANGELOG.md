@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.0] - 2020-04-05
+### Changed
+- New branch "mini". Duplicacy_web is no longer baked into the image; it is downloaded as needed based on the specified environment variable, resembling the behaviour of duplicacy command line engine. That way versions can be switched without re-downloading the image appropriate for the architecture -- merely stopping, changing the variable, and starting the image.
+
 ## [0.0.8] - 2020-03-02
 ### Changed
 - Bumped duplicacy_web version to 1.2.1
