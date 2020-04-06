@@ -23,6 +23,6 @@ fi
 echo "Logging tail of the log from this moment on"
 tail -0 -f /logs/duplicacy_web.log & 
 
-echo "Starting duplicacy"
-exec duplicacy_web 
+echo "Starting duplicacy_web"
+exec ${APPFILEPATH}
 
