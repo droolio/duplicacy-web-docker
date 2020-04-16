@@ -17,7 +17,7 @@ temp=/tmp/dupl01
 mkdir $temp
 #chmod 777 $temp
 
-
+read
 # build
 docker build --tag=saspus/duplicacy-web .                               || exit 1
 
