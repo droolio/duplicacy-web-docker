@@ -3,7 +3,7 @@ FROM alpine:latest
 ## Set desired duplicacy_web version and restart the container to swithc to that version. 
 ## Executables are cached in /config/bin
 
-ENV DUPLICACY_WEB_VERSION=1.3.0
+ENV DUPLICACY_WEB_VERSION=1.4.0
 
 # Set to actual USR_ID and GRP_ID of the user this should run under
 # Uses root by default, unless changed
