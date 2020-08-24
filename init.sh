@@ -37,6 +37,9 @@ case ${MACHINE_ARCH} in
 "arm")
     ARCH=arm
     ;;
+"armv7l")
+    ARCH=arm
+    ;;
 *)
     echo Unknown or unsupported architecture ${MACHINE_ARCH}
     exit 1
