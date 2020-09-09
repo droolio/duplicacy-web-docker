@@ -31,7 +31,13 @@ Notes:
 ### `:mini` only
 `DUPLICACY_WEB_VERSION`: Specifies version of duplicacy_web to fetch and use. 
 
-To apply the changes restart the container. This makes the `:mini` version behave more like a thin adapter layer as opposed to true self-encompassing container. 
+Acceptable values:
+
+- `x.x.x` - Use specific version, like 1.4.1
+- `Latest` - Use latest available version from Acrosync.
+- `Stable` - Use last known stable version as defined by Acrosync.
+
+To apply the changes restart the container. When on Latest or Stabe channels restart the container to check for and apply updates as needed. This makes the `:mini` version behave more like a thin adapter layer as opposed to true self-encompassing container. 
 
 
 ## To run
@@ -44,7 +50,7 @@ docker run  --name duplicacy-web-docker-container         \
              --env USR_ID=$(id -u)                        \
              --env GRP_ID=$(id -g)                        \
              --env TZ="America/Los_Angeles"               \
-             --env DUPLICACY_WEB_VERSION="1.4.1"          \
+             --env DUPLICACY_WEB_VERSION="Stable"         \
           --volume ~/Library/Duplicacy:/config            \
           --volume ~/Library/Logs/Duplicacy/:/logs        \
           --volume ~/Library/Caches/Duplicacy:/cache      \
