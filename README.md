@@ -4,12 +4,14 @@ This is a wrapper around http://duplicacy.com web GUI.
 
 Two branches are supported:
 
-- `latest`: the classic one with the fixed version of duplicacy_web baked into the image. x86_64 only.
+- `latest`: the classic one with the fixed version of duplicacy_web baked into the image.
 - `mini`: The container downloads and caches the correct binary of duplicacy_web for the host architecture and selected version on start. To update/downgrade to another version change the environment variable and restart the container. Supports x86_x64 and arm. 
+
+Supported are x64, arm, arm64
 
 Notes:
 
-- Arm detection is untested.
+- Arm versions are untested.
 - Download-on-demand approach was already used by duplicacy_web to fetch the updated version of a duplicacy cli engine. The `mini` container now extends this behavior to duplicacy_web itself making it easy to switch between versions at your cadence.
 
 ## Volumes 
@@ -31,7 +33,13 @@ Notes:
 ### `:mini` only
 `DUPLICACY_WEB_VERSION`: Specifies version of duplicacy_web to fetch and use. 
 
-To apply the changes restart the container. This makes the `:mini` version behave more like a thin adapter layer as opposed to true self-encompassing container. 
+Acceptable values:
+
+- `x.x.x` - Use specific version, like 1.4.1
+- `Latest` - Use latest available version from Acrosync.
+- `Stable` - Use last known stable version as defined by Acrosync.
+
+To apply the changes restart the container. When on Latest or Stabe channels restart the container to check for and apply updates as needed. This makes the `:mini` version behave more like a thin adapter layer as opposed to true self-encompassing container. 
 
 
 ## To run
@@ -44,7 +52,7 @@ docker run  --name duplicacy-web-docker-container         \
              --env USR_ID=$(id -u)                        \
              --env GRP_ID=$(id -g)                        \
              --env TZ="America/Los_Angeles"               \
-             --env DUPLICACY_WEB_VERSION="1.4.1"          \
+             --env DUPLICACY_WEB_VERSION="Stable"         \
           --volume ~/Library/Duplicacy:/config            \
           --volume ~/Library/Logs/Duplicacy/:/logs        \
           --volume ~/Library/Caches/Duplicacy:/cache      \
