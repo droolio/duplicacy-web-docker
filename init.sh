@@ -46,6 +46,9 @@ x86_64)
 arm|armv7l)
     ARCH=arm
     ;;
+aarch64)
+    ARCH=arm64
+    ;;
 *)
     echo Unknown or unsupported architecture ${MACHINE_ARCH}
     exit ${ERROR_UNSUPPORTED_ARCHITECTURE}
