@@ -37,7 +37,7 @@ Acceptable values:
 
 - `x.x.x` - Use specific version, like 1.4.1
 - `Latest` - Use latest available version from Acrosync.
-- `Stable` - Use last known stable version as defined by Acrosync.
+- `Stable` - Use last known stable version as [defined](https://forum.duplicacy.com/t/how-to-find-out-the-url-for-the-latest-version-of-web-gui-and-or-check-for-update/4183/12?u=saspus) by Acrosync.
 
 To apply the changes restart the container. When on Latest or Stabe channels restart the container to check for and apply updates as needed. This makes the `:mini` version behave more like a thin adapter layer as opposed to true self-encompassing container. 
 
