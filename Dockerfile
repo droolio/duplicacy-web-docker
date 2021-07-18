@@ -19,7 +19,7 @@ ENV GRP_ID=0
 ENV TZ="America/Los_Angeles"
 
 # Installing software
-RUN apk --update add --no-cache bash ca-certificates dbus su-exec tzdata jq curl && \
+RUN apk --update add --no-cache bash ca-certificates dbus su-exec tzdata jq curl wget && \
     rm -f /var/lib/dbus/machine-id && ln -s /config/machine-id /var/lib/dbus/machine-id 
 
 EXPOSE 3875/tcp
