@@ -76,7 +76,10 @@ docker run  --name duplicacy-web-docker-container         \
 ```
 
 
-Note, it's important to pass hostname, as duplicacy license is requested based on hostname and machine-id provided by dbus. Machine-id will be persisted in the /config directory.
+Notes:
+
+1. It's important to pass a hostname, as duplicacy license is requested based on hostname and machine-id provided by dbus. Machine-id will be persisted in the /config directory.
+2. To perform backups and other maintenance tasks it's sufficient (and recommended) to mount the source read-only (see `~:/backuproot:ro` above), however in order for the restore to succeed the target volume needs to be mounted in RW mode. 
 
 ## To use
 Go to http://hostname:3875
