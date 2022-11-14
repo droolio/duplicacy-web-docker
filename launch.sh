@@ -24,5 +24,5 @@ echo "Logging tail of the log from this moment on"
 tail -0 -f /logs/duplicacy_web.log & 
 
 echo "Starting duplicacy_web"
-exec "${APPFILEPATH}"
+exec "${APP_FILE_PATH}"
 
