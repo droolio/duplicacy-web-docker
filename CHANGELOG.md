@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.7] - 2022-11-13
+### Changed
+- Users [reported](https://forum.duplicacy.com/t/backups-stopped-working-segmentation-fault-in-saspus-docker-image/6876/10) cases where wget would succeed but the downloaded file would nevertheless be truncated. To address this, after downloading duplicacy_web executable, its hash is checked against the expected one reported by the web service.
+
 ## [0.1.6] - 2021-07-17
 ### Fixed
 - Some users reported wget failures when attempting to download the duplicacy_web. To fix, added standalone wget to container.
