@@ -1,6 +1,6 @@
 #!/usr/bin/env bash  
 
-echo duplicacy_web runing as user $(id -un):$(id -gn)\($(id -u):$(id -g)\)
+echo "duplicacy_web running as user $(id -un):$(id -gn)\($(id -u):$(id -g)\)"
 
 if [ ! -d ~/.duplicacy-web ]; then
     ln -s /config/  ~/.duplicacy-web
@@ -24,5 +24,5 @@ echo "Logging tail of the log from this moment on"
 tail -0 -f /logs/duplicacy_web.log & 
 
 echo "Starting duplicacy_web"
-exec ${APPFILEPATH}
+exec "${APPFILEPATH}"
 

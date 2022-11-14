@@ -2,8 +2,8 @@ FROM alpine:latest
 
 # Set desired duplicacy_web version or update channel and restart the container to switch to or update the version. 
 # Recognized values are 
-#   Latest - use latest version available as reported by https://duplicacy.com/
-#	Stable - use stable version avaiobale as reported by https://duplicacy.com/
+#   Latest - use latest version available as reported by https://duplicacy.com/latest_web_version
+#	Stable - use stable version available as reported by https://duplicacy.com/latest_web_version
 #   x.x.x  - use specific version, like 1.4.1
 
 ## Executables are cached in /config/bin
