@@ -1,6 +1,6 @@
 git checkout master || exit 1
 
-export DUPLICACY_WEB_VERSION=1.6.3
+export DUPLICACY_WEB_VERSION=1.7.0
 
 docker buildx build \
 		--push								\
