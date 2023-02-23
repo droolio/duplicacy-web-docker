@@ -5,13 +5,12 @@ This is a wrapper around http://duplicacy.com web GUI.
 Two branches are supported:
 
 - `latest`: the classic one with the fixed version of duplicacy_web baked into the image.
-- `mini`: The container downloads and caches the correct binary of duplicacy_web for the host architecture and selected version on start. To update/downgrade to another version change the environment variable and restart the container. Supports x86_x64 and arm. 
+- `mini`: The container downloads and caches the correct binary of duplicacy_web for the host architecture and selected version on start. To update/downgrade to another version change the environment variable and restart the container.
 
-Supported are x64, arm, arm64
+Supports x64, arm, arm64.
 
 Notes:
 
-- Arm versions are untested.
 - Download-on-demand approach was already used by duplicacy_web to fetch the updated version of a duplicacy cli engine. The `mini` container now extends this behavior to duplicacy_web itself making it easy to switch between versions at your cadence.
 
 ## Volumes 
