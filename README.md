@@ -11,7 +11,6 @@ Supported are x64, arm, arm64
 
 Notes:
 
-- Arm versions are untested.
 - Download-on-demand approach was already used by duplicacy_web to fetch the updated version of a duplicacy cli engine. The `mini` container now extends this behavior to duplicacy_web itself making it easy to switch between versions at your cadence.
 
 ## Volumes 
