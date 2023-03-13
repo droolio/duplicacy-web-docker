@@ -1,5 +1,9 @@
 # Changelog
 
+## [20] - 2023-03-13
+### Changed
+- Bumped duplicacy_web version to 1.7.2
+
 ## [19] - 2023-02-22
 ### Changed
 - Bumped duplicacy_web version to 1.7.0
